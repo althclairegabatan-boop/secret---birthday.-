@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Babe 💗</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffd6e7, #f7a8c4, #ffe8f1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  .card {
+    width: min(88%, 390px);
+    min-height: 500px;
+    background: rgba(255,255,255,.9);
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(160,60,100,.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    position: relative;
+  }
+  .sparkle { position:absolute; font-size:24px; opacity:.7; }
+  .s1{top:25px;left:30px}.s2{top:45px;right:30px}.s3{bottom:35px;left:35px}.s4{bottom:25px;right:35px}
+  .hidden { display:none; }
+  .mystery {
+    font-size: 32px;
+    color:#d94f82;
+    margin-bottom: 25px;
+  }
+  button {
+    border:0;
+    padding:16px 32px;
+    border-radius:999px;
+    background:#ec6f9e;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(200,70,120,.25);
+  }
+  button:active { transform:scale(.97); }
+  .message {
+    animation: pop .6s ease;
+  }
+  .message h1 {
+    color:#d84279;
+    font-size:31px;
+    line-height:1.3;
+    margin:0;
+  }
+  .flowers { font-size:45px; margin-bottom:18px; }
+  .sub { color:#b65b7d; margin-top:18px; font-size:17px; }
+  @keyframes pop {
+    from { opacity:0; transform:scale(.75); }
+    to { opacity:1; transform:scale(1); }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="sparkle s1">✦</span><span class="sparkle s2">♡</span>
+  <span class="sparkle s3">✧</span><span class="sparkle s4">♡</span>
+
+  <div id="start">
+    <div class="mystery">💗✨</div>
+    <button onclick="reveal()">Click Babe</button>
+  </div>
+
+  <div id="message" class="message hidden">
+    <div class="flowers">💐</div>
+    <h1>HAPPY BIRTHDAY<br>AINSLEY BABEE!!! 🥳</h1>
+    <div class="sub">Wishing you the sweetest birthday! 💕✨</div>
+  </div>
+</div>
+
+<script>
+function reveal() {
+  document.getElementById('start').classList.add('hidden');
+  document.getElementById('message').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
